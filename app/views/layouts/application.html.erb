@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todoapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <ul>
+      <% flash.each do |name,msg|  %>
+        <li>  <%= msg %> </li>
+      <%end%>
+    </ul>
+  
+    <%= yield %>
+  </body>
+</html>
